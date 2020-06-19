@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form1</class>
+ <widget class="QWidget" name="Form1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>房贷计算器2</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Form1{
+border-image: url(:/C:/Users/dell/Desktop/QQ图片20200527165520.jpg);
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>50</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;贷款类别：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>130</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;计算方式：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>210</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;贷款总额：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>310</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;按揭年数：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>400</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;贷款利率：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>500</y>
+     <width>192</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;还款方式：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>500</y>
+     <width>125</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 14pt &quot;Arial Black&quot;;</string>
+   </property>
+   <property name="text">
+    <string>等额本息</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_2">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>500</y>
+     <width>141</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 14pt &quot;Arial Black&quot;;</string>
+   </property>
+   <property name="text">
+    <string>等额本金</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>610</y>
+     <width>201</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 18pt &quot;Arial Black&quot;;
+background-color: rgb(255, 0, 0);
+background-color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>开始计算</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>610</y>
+     <width>201</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 18pt &quot;Arial Black&quot;;</string>
+   </property>
+   <property name="text">
+    <string>清空重填</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>50</y>
+     <width>611</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 14pt &quot;Arial Black&quot;;</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>商业贷款</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>公积金贷款</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>组合型贷款</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>130</y>
+     <width>611</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 14pt &quot;Arial Black&quot;;</string>
+   </property>
+   <property name="currentText">
+    <string>根据贷款总额计算</string>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>根据面积、单价计算</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>根据贷款总额计算</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>220</y>
+     <width>611</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;Arial&quot;;</string>
+   </property>
+   <property name="placeholderText">
+    <string>请输入贷款总额</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_3">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>310</y>
+     <width>611</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;Arial&quot;;</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>25年（300期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>24年（288期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>23年（276期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>22年（264期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>21年（252期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>20年（240期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>19年（228期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>18年（216期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>17年（204期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16年（192期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>15年（180期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>14年（168期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>13年（156期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12年（144期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11年（132期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10年（120期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>9年（108期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8年（96期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>7年（84期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6年（72期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>5年（60期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4年（48期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3年（36期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2年（24期）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1年（12期）</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>400</y>
+     <width>611</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;Arial&quot;;</string>
+   </property>
+   <property name="placeholderText">
+    <string>请输入贷款利率</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>210</y>
+     <width>68</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 14pt &quot;Arial Black&quot;;</string>
+   </property>
+   <property name="text">
+    <string>万</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>390</y>
+     <width>68</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 14pt &quot;Arial Black&quot;;</string>
+   </property>
+   <property name="text">
+    <string>%</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form1</receiver>
+   <slot>lineeditchanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>235</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>36</x>
+     <y>275</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_2</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form1</receiver>
+   <slot>lineeditchanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>430</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>465</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Form1</receiver>
+   <slot>qingkong()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>828</x>
+     <y>650</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form1</receiver>
+   <slot>jisuan()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>648</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>661</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>lineeditchanged()</slot>
+  <slot>qingkong()</slot>
+  <slot>jisuan()</slot>
+ </slots>
+</ui>
